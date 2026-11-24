@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUBLIME — Prendas Personalizadas &amp; Streetwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            bone: '#F4F1EA',
+            boneCard: '#FAF8F3',
+            boneBorder: '#E2DDD2',
+            ink: '#111111',
+            inkMuted: '#55534E',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #F4F1EA;
+      color: #111111;
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-bone text-ink antialiased selection:bg-ink selection:text-bone">
+
+  <!-- Barra de navegación -->
+  <header class="sticky top-0 z-40 bg-bone/90 backdrop-blur-md border-b border-boneBorder">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="text-xl sm:text-2xl font-black tracking-tighter uppercase">SUBLIME</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-inkMuted">
+        <a href="#catalogo" class="hover:text-ink transition">Catálogo</a>
+        <a href="#cotizador" class="hover:text-ink transition">Cotizador</a>
+        <a href="#preguntas" class="hover:text-ink transition">Preguntas</a>
+      </nav>
+      <a href="https://wa.me/584246506073?text=Hola%20SUBLIME%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20cotizar%20un%20pedido."
+         target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 bg-ink text-bone text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full hover:bg-neutral-800 transition">
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero limpio -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-10 sm:pt-20 sm:pb-14">
+    <div class="max-w-3xl">
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-inkMuted mb-4">
+        SUBLIME · CUSTOM APPAREL &amp; FULL PRINT
+      </p>
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-[1.05] mb-6">
+        Prendas base y estampados personalizados.
+      </h1>
+      <p class="text-base sm:text-lg text-inkMuted leading-relaxed mb-8 max-w-2xl">
+        Franelas Regular Fit, Oversize, Hoodies y Uniformes Full Print. Cotiza en segundos y envía tu pedido directo a WhatsApp.
+      </p>
+      <a href="#catalogo"
+         class="inline-block bg-ink text-bone font-bold text-sm px-6 py-3.5 rounded-xl hover:bg-neutral-800 transition">
+        Ver catálogo
+      </a>
+    </div>
+  </section>
+
+  <!-- Catálogo -->
+  <section id="catalogo" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-boneBorder">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+      <div>
+        <p class="text-xs font-bold tracking-[0.2em] uppercase text-inkMuted mb-2">CATÁLOGO</p>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Elige tu prenda</h2>
+      </div>
+      <p class="text-sm text-inkMuted max-w-md">
+        Ajusta talla, color, estampado y cantidad para ver el precio unitario y el total al instante.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- 1. Franela Regular Fit -->
+      <article class="bg-boneCard border border-boneBorder rounded-3xl overflow-hidden flex flex-col justify-between p-6 sm:p-7">
+        <div>
+          <div class="relative aspect-[4/3] bg-bone rounded-2xl overflow-hidden border border-boneBorder mb-6 flex items-center justify-center">
+            <img id="img-regular" src="adulto regular 2.jpg" alt="Franela Regular Fit"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 class="w-full h-full object-contain p-4 transition duration-300" />
+            <div class="hidden flex-col items-center justify-center text-center p-6 text-inkMuted">
+              <span class="text-xs font-bold uppercase tracking-wider">Imagen de producto</span>
+              <span class="text-xs mt-1">Revisa <strong>adulto regular 2.jpg</strong>, <strong>adulto regular 1.jpg</strong>, <strong>niño 2.jpg</strong> o <strong>niño 1.jpg</strong></span>
+            </div>
+          </div>
+
+          <div class="flex items-start justify-between gap-4 mb-2">
+            <h3 class="text-2xl font-extrabold">Franela Regular Fit</h3>
+            <div class="text-right">
+              <p id="price-regular" class="text-2xl font-black">$12</p>
+              <p id="tier-regular" class="text-[11px] font-semibold text-inkMuted">c/u · Total: $12</p>
+            </div>
+          </div>
+          <p class="text-sm text-inkMuted leading-relaxed mb-5">
+            Adulto desde $12 base y niño desde $10 base. Baja $1 desde 3 pzs y $2 desde 12 pzs. Sin estampado -$3; pecho + espalda +$2.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="size-regular" class="block text-xs font-bold uppercase tracking-wider mb-1.5">Talla</label>
+              <select id="size-regular"
+                      class="w-full bg-bone border border-boneBorder rounded-xl px-3.5 py-2.5 text-xs font-bold focus:outline-none focus:border-ink">
+                <option value="Adulto · S">Adulto — S</option>
+                <option value="Adulto · M" selected>Adulto — M</option>
+                <option value="Adulto · L">Adulto — L</option>
+                <option value="Adulto · XL">Adulto — XL</option>
+                <option value="Adulto · 2XL">Adulto — 2XL</option>
+                <option value="Adulto · 3XL">Adulto — 3XL</option>
+                <option value="Niño · 2–4">Niño — Tallas 2 a 4 ($10 base)</option>
+                <option value="Niño · 6–8">Niño — Tallas 6 a 8 ($10 base)</option>
+                <option value="Niño · 10–12">Niño — Tallas 10 a 12 ($10 base)</option>
+                <option value="Niño · 14–16">Niño — Tallas 14 a 16 ($10 base)</option>
+              </select>
+            </div>
+            <div>
+              <label for="print-regular" class="block text-xs font-bold uppercase tracking-wider mb-1.5">Estampado</label>
+              <select id="print-regular"
+                      class="w-full bg-bone border border-boneBorder rounded-xl px-3.5 py-2.5 text-xs font-bold focus:outline-none focus:border-ink">
+                <option value="0|1 estampado incluido" selected>1 estampado (Base)</option>
+                <option value="-3|Sin estampado (-$3)">Sin estampado (-$3)</option>
+                <option value="2|2 estampados grandes: pecho y espalda (+$2)">Pecho + Espalda (+$2)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Color -->
+          <div class="mb-5">
+            <label class="block text-xs font-bold uppercase tracking-wider mb-2">Color</label>
+            <div class="flex flex-wrap gap-2" id="colors-regular">
+              <button type="button" data-color="Blanco" data-adult-img="adulto regular 2.jpg" data-kid-img="niño 2.jpg"
+                      class="color-btn-regular px-3.5 py-2 rounded-xl text-xs font-bold border border-ink bg-ink text-bone transition">
+                Blanco
+              </button>
+              <button type="button" data-color="Negro" data-adult-img="adulto regular 1.jpg" data-kid-img="niño 1.jpg"
+                      class="color-btn-regular px-3.5 py-2 rounded-xl text-xs font-bold border border-boneBorder bg-bone text-ink hover:border-ink transition">
+                Negro
+              </button>
+              <button type="button" data-color="Otro color (Consultar)" data-adult-img="adulto regular 2.jpg" data-kid-img="niño 2.jpg"
+                      class="color-btn-regular px-3.5 py-2 rounded-xl text-xs font-semibold border border-boneBorder bg-bone text-inkMuted hover:border-ink hover:text-ink transition">
+                Otros colores
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cantidad y Botón WhatsApp -->
+        <div class="pt-4 border-t border-boneBorder flex items-center gap-3">
+          <div class="w-24">
+            <label for="qty-regular" class="block text-[10px] font-bold uppercase tracking-wider text-inkMuted mb-1">Cantidad</label>
+            <input id="qty-regular" type="number" min="1" value="1"
+                   class="w-full bg-bone border border-boneBorder rounded-xl px-3 py-2.5 text-sm font-bold text-center focus:outline-none focus:border-ink" />
+          </div>
+          <a id="wa-regular" href="#" target="_blank" rel="noopener"
+             class="flex-1 bg-ink text-bone font-bold text-sm py-3.5 px-4 rounded-xl text-center hover:bg-neutral-800 transition mt-4">
+            Pedir por WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- 2. Franela Oversize -->
+      <article class="bg-boneCard border border-boneBorder rounded-3xl overflow-hidden flex flex-col justify-between p-6 sm:p-7">
+        <div>
+          <div class="relative aspect-[4/3] bg-bone rounded-2xl overflow-hidden border border-boneBorder mb-6 flex items-center justify-center">
+            <img id="img-oversize" src="oversize 2.jpg" alt="Franela Oversize"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 class="w-full h-full object-contain p-4 transition duration-300" />
+            <div class="hidden flex-col items-center justify-center text-center p-6 text-inkMuted">
+              <span class="text-xs font-bold uppercase tracking-wider">Imagen de producto</span>
+              <span class="text-xs mt-1">Revisa <strong>oversize 2.jpg</strong> y <strong>oversize 1.jpg</strong></span>
+            </div>
+          </div>
+
+          <div class="flex items-start justify-between gap-4 mb-2">
+            <h3 class="text-2xl font-extrabold">Franela Oversize</h3>
+            <div class="text-right">
+              <p id="price-oversize" class="text-2xl font-black">$17</p>
+              <p id="tier-oversize" class="text-[11px] font-semibold text-inkMuted">c/u · Total: $17</p>
+            </div>
+          </div>
+          <p class="text-sm text-inkMuted leading-relaxed mb-5">
+            Corte boxy de hombro caído. $17 base (1–2 pzs), $16 (3–11 pzs) y $15 (12+ pzs). Sin estampado -$3; pecho + espalda +$2.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            <div>
+              <label for="size-oversize" class="block text-xs font-bold uppercase tracking-wider mb-1.5">Talla</label>
+              <select id="size-oversize"
+                      class="w-full bg-bone border border-boneBorder rounded-xl px-3.5 py-2.5 text-xs font-bold focus:outline-none focus:border-ink">
+                <option value="S">S</option>
+                <option value="M" selected>M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="14 / 16">14 / 16</option>
+              </select>
+            </div>
+            <div>
+              <label for="print-oversize" class="block text-xs font-bold uppercase tracking-wider mb-1.5">Estampado</label>
+              <select id="print-oversize"
+                      class="w-full bg-bone border border-boneBorder rounded-xl px-3.5 py-2.5 text-xs font-bold focus:outline-none focus:border-ink">
+                <option value="0|1 estampado incluido" selected>1 estampado (Base)</option>
+                <option value="-3|Sin estampado (-$3)">Sin estampado (-$3)</option>
+                <option value="2|2 estampados grandes: pecho y espalda (+$2)">Pecho + Espalda (+$2)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Color -->
+          <div class="mb-5">
+            <label class="block text-xs font-bold uppercase tracking-wider mb-2">Color</label>
+            <div class="flex flex-wrap gap-2" id="colors-oversize">
+              <button type="button" data-color="Negro (Siempre disponible)" data-img="oversize 2.jpg"
+                      class="color-btn-oversize px-3.5 py-2 rounded-xl text-xs font-bold border border-ink bg-ink text-bone transition">
+                Negro
+              </button>
+              <button type="button" data-color="Blanco (Siempre disponible)" data-img="oversize 1.jpg"
+                      class="color-btn-oversize px-3.5 py-2 rounded-xl text-xs font-bold border border-boneBorder bg-bone text-ink hover:border-ink transition">
+                Blanco
+              </button>
+              <button type="button" data-color="Otro color (Consultar disponibilidad)" data-img="oversize 2.jpg"
+                      class="color-btn-oversize px-3.5 py-2 rounded-xl text-xs font-semibold border border-boneBorder bg-bone text-inkMuted hover:border-ink hover:text-ink transition">
+                Otros colores
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cantidad y Botón WhatsApp -->
+        <div class="pt-4 border-t border-boneBorder flex items-center gap-3">
+          <div class="w-24">
+            <label for="qty-oversize" class="block text-[10px] font-bold uppercase tracking-wider text-inkMuted mb-1">Cantidad</label>
+            <input id="qty-oversize" type="number" min="1" value="1"
+                   class="w-full bg-bone border border-boneBorder rounded-xl px-3 py-2.5 text-sm font-bold text-center focus:outline-none focus:border-ink" />
+          </div>
+          <a id="wa-oversize" href="#" target="_blank" rel="noopener"
+             class="flex-1 bg-ink text-bone font-bold text-sm py-3.5 px-4 rounded-xl text-center hover:bg-neutral-800 transition mt-4">
+            Pedir por WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- 3. Hoodies -->
+      <article class="bg-boneCard border border-boneBorder rounded-3xl overflow-hidden flex flex-col justify-between p-6 sm:p-7">
+        <div>
+          <div class="relative aspect-[4/3] bg-bone rounded-2xl overflow-hidden border border-boneBorder mb-6 flex items-center justify-center">
+            <img src="hoodie.jpg" alt="Hoodie Personalizado"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 class="w-full h-full object-contain p-4" />
+            <div class="hidden flex-col items-center justify-center text-center p-6 text-inkMuted">
+              <span class="text-xs font-bold uppercase tracking-wider">Imagen de producto</span>
+              <span class="text-xs mt-1">Revisa <strong>hoodie.jpg</strong></span>
+            </div>
+          </div>
+
+          <div class="flex items-start justify-between gap-4 mb-2">
+            <h3 class="text-2xl font-extrabold">Hoodies</h3>
+            <div class="text-right">
+              <p id="price-hoodie" class="text-2xl font-black">$25</p>
+              <p id="tier-hoodie" class="text-[11px] font-semibold text-inkMuted">c/u · Total: $25</p>
+            </div>
+          </div>
+          <p class="text-sm text-inkMuted leading-relaxed mb-5">
+            Sudadera con capucha y bolsillo canguro. $25 base (1–2 pzs), $24 (3–11 pzs) y $23 (12+ pzs).
+          </p>
+
+          <div class="mb-4">
+            <label for="size-hoodie" class="block text-xs font-bold uppercase tracking-wider mb-1.5">Talla</label>
+            <select id="size-hoodie"
+                    class="w-full bg-bone border border-boneBorder rounded-xl px-3.5 py-2.5 text-xs font-bold focus:outline-none focus:border-ink">
+              <option value="S">S</option>
+              <option value="M" selected>M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="2XL">2XL</option>
+            </select>
+          </div>
+
+          <!-- Color -->
+          <div class="mb-5">
+            <label class="block text-xs font-bold uppercase tracking-wider mb-2">Color</label>
+            <div class="flex flex-wrap gap-2" id="colors-hoodie">
+              <button type="button" data-color="Negro"
+                      class="color-btn-hoodie px-3.5 py-2 rounded-xl text-xs font-bold border border-ink bg-ink text-bone transition">
+                Negro
+              </button>
+              <button type="button" data-color="Blanco"
+                      class="color-btn-hoodie px-3.5 py-2 rounded-xl text-xs font-bold border border-boneBorder bg-bone text-ink hover:border-ink transition">
+                Blanco
+              </button>
+              <button type="button" data-color="Consultar color"
+                      class="color-btn-hoodie px-3.5 py-2 rounded-xl text-xs font-semibold border border-boneBorder bg-bone text-inkMuted hover:border-ink hover:text-ink transition">
+                Otros colores
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cantidad y Botón WhatsApp -->
+        <div class="pt-4 border-t border-boneBorder flex items-center gap-3">
+          <div class="w-24">
+            <label for="qty-hoodie" class="block text-[10px] font-bold uppercase tracking-wider text-inkMuted mb-1">Cantidad</label>
+            <input id="qty-hoodie" type="number" min="1" value="1"
+                   class="w-full bg-bone border border-boneBorder rounded-xl px-3 py-2.5 text-sm font-bold text-center focus:outline-none focus:border-ink" />
+          </div>
+          <a id="wa-hoodie" href="#" target="_blank" rel="noopener"
+             class="flex-1 bg-ink text-bone font-bold text-sm py-3.5 px-4 rounded-xl text-center hover:bg-neutral-800 transition mt-4">
+            Pedir por WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- 4. Uniformes Full Print -->
+      <article class="bg-boneCard border border-boneBorder rounded-3xl overflow-hidden flex flex-col justify-between p-6 sm:p-7">
+        <div>
+          <div class="relative aspect-[4/3] bg-bone rounded-2xl overflow-hidden border border-boneBorder mb-6 flex items-center justify-center">
+            <img id="img-fullprint" src="futbol.jpg" alt="Uniformes Full Print"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 class="w-full h-full object-contain p-4 transition duration-300" />
+            <div class="hidden flex-col items-center justify-center text-center p-6 text-inkMuted">
+              <span class="text-xs font-bold uppercase tracking-wider">Imagen de producto</span>
+              <span class="text-xs mt-1">Revisa <strong>futbol.jpg</strong> y <strong>basket.jpg</strong></span>
+            </div>
+          </div>
+
+          <div class="flex items-start justify-between gap-4 mb-2">
+            <h3 class="text-2xl font-extrabold">Uniformes Full Print</h3>
+            <div class="text-right">
+              <p id="price-fullprint" class="text-2xl font-black">$13</p>
+              <p id="tier-fullprint" class="text-[11px] font-semibold text-inkMuted">c/u · Total: $156</p>
+            </div>
+          </div>
+          <p class="text-sm text-inkMuted leading-relaxed mb-5">
+            Sublimación total desde 12 piezas ($13 c/u), 36+ piezas ($12 c/u) y 72+ piezas ($11 c/u).
+          </p>
+
+          <!-- Estilo -->
+          <div class="mb-5">
+            <label class="block text-xs font-bold uppercase tracking-wider mb-2">Estilo</label>
+            <div class="flex flex-wrap gap-2" id="style-fullprint">
+              <button type="button" data-style="Fútbol" data-img="futbol.jpg"
+                      class="style-btn-fp px-3.5 py-2 rounded-xl text-xs font-bold border border-ink bg-ink text-bone transition">
+                Fútbol
+              </button>
+              <button type="button" data-style="Baloncesto" data-img="basket.jpg"
+                      class="style-btn-fp px-3.5 py-2 rounded-xl text-xs font-bold border border-boneBorder bg-bone text-ink hover:border-ink transition">
+                Baloncesto
+              </button>
+              <button type="button" data-style="Empresas / Escolar" data-img="futbol.jpg"
+                      class="style-btn-fp px-3.5 py-2 rounded-xl text-xs font-semibold border border-boneBorder bg-bone text-inkMuted hover:border-ink hover:text-ink transition">
+                Empresas / Escolar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cantidad y Botón WhatsApp -->
+        <div class="pt-4 border-t border-boneBorder flex items-center gap-3">
+          <div class="w-24">
+            <label for="qty-fullprint" class="block text-[10px] font-bold uppercase tracking-wider text-inkMuted mb-1">Cantidad</label>
+            <input id="qty-fullprint" type="number" min="12" value="12"
+                   class="w-full bg-bone border border-boneBorder rounded-xl px-3 py-2.5 text-sm font-bold text-center focus:outline-none focus:border-ink" />
+          </div>
+          <a id="wa-fullprint" href="#" target="_blank" rel="noopener"
+             class="flex-1 bg-ink text-bone font-bold text-sm py-3.5 px-4 rounded-xl text-center hover:bg-neutral-800 transition mt-4">
+            Cotizar equipo
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Calculadora de Presupuesto -->
+  <section id="cotizador" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 border-t border-boneBorder">
+    <div class="bg-boneCard border border-boneBorder rounded-3xl p-6 sm:p-10">
+      <div class="max-w-2xl mb-8">
+        <p class="text-xs font-bold tracking-[0.2em] uppercase text-inkMuted mb-2">CALCULADORA</p>
+        <h2 class="text-3xl font-black tracking-tight mb-2">Calcula tu presupuesto</h2>
+        <p class="text-sm text-inkMuted">
+          Selecciona prenda, cantidad y acabado para calcular el unitario y el total.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <div>
+            <label for="calc-product" class="block text-xs font-bold uppercase tracking-wider mb-2">Prenda</label>
+            <select id="calc-product"
+                    class="w-full bg-bone border border-boneBorder rounded-xl px-4 py-3 text-sm font-semibold focus:outline-none focus:border-ink">
+              <option value="regular-adulto">Franela Regular Fit Adulto ($12 base)</option>
+              <option value="regular-nino">Franela Regular Fit Niño ($10 base)</option>
+              <option value="oversize">Franela Oversize ($17 base)</option>
+              <option value="hoodie">Hoodie ($25 base)</option>
+              <option value="fullprint">Uniforme Full Print ($13 base · mín. 12 pzs)</option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="calc-qty" class="block text-xs font-bold uppercase tracking-wider mb-2">Cantidad</label>
+              <input id="calc-qty" type="number" min="1" value="3"
+                     class="w-full bg-bone border border-boneBorder rounded-xl px-4 py-3 text-sm font-bold focus:outline-none focus:border-ink" />
+              <p id="calc-min-note" class="text-[11px] text-inkMuted mt-1">-1$ desde 3 pzs · -2$ desde 12 pzs</p>
+            </div>
+            <div>
+              <label for="calc-print" class="block text-xs font-bold uppercase tracking-wider mb-2">Acabado / Estampado</label>
+              <select id="calc-print"
+                      class="w-full bg-bone border border-boneBorder rounded-xl px-4 py-3 text-sm font-semibold focus:outline-none focus:border-ink">
+                <option value="standard">1 estampado incluido</option>
+                <option value="blank">Sin estampado (-$3)</option>
+                <option value="double">Pecho y espalda (+$2)</option>
+                <option value="fullprint">Sublimación Full Print</option>
+              </select>
+              <p id="calc-print-note" class="text-[11px] text-inkMuted mt-1">Aplica en Regular Fit y Oversize</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resultado -->
+        <div class="lg:col-span-5 bg-bone border border-boneBorder rounded-2xl p-6">
+          <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-inkMuted mb-3">
+            <span>Resumen</span>
+            <span id="calc-badge" class="bg-ink text-bone px-2.5 py-1 rounded-full text-[10px]">3+ pzs (-$1)</span>
+          </div>
+
+          <div class="space-y-2 border-b border-boneBorder pb-4 mb-4 text-sm">
+            <div class="flex justify-between gap-2">
+              <span class="text-inkMuted">Prenda:</span>
+              <span id="calc-name" class="font-bold text-right">Franela Regular Fit Adulto</span>
+            </div>
+            <div class="flex justify-between gap-2">
+              <span class="text-inkMuted">Acabado:</span>
+              <span id="calc-work-label" class="font-semibold text-right">1 estampado incluido</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-inkMuted">Precio unitario:</span>
+              <span id="calc-unit" class="font-bold">$11</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-inkMuted">Cantidad:</span>
+              <span id="calc-count" class="font-bold">3 piezas</span>
+            </div>
+          </div>
+
+          <div class="flex items-baseline justify-between mb-6">
+            <span class="text-sm font-bold">Total estimado</span>
+            <span id="calc-total" class="text-3xl font-black">$33</span>
+          </div>
+
+          <a id="calc-wa" href="#" target="_blank" rel="noopener"
+             class="block w-full bg-ink text-bone font-bold text-sm py-3.5 px-5 rounded-xl text-center hover:bg-neutral-800 transition">
+            Enviar cotización por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas Frecuentes -->
+  <section id="preguntas" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 border-t border-boneBorder">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-boneCard border border-boneBorder rounded-2xl p-6">
+        <h3 class="font-extrabold text-base mb-2">¿Cómo envío mi diseño?</h3>
+        <p class="text-sm text-inkMuted leading-relaxed">
+          Al abrir WhatsApp envías tu arte o logo en buena calidad (PNG sin fondo, PDF, AI o PSD) y coordinamos medidas y colores.
+        </p>
+      </div>
+      <div class="bg-boneCard border border-boneBorder rounded-2xl p-6">
+        <h3 class="font-extrabold text-base mb-2">¿Cómo aplican los precios?</h3>
+        <p class="text-sm text-inkMuted leading-relaxed">
+          Desde 3 pzs baja $1 y desde 12 pzs baja $2. En Regular y Oversize, sin estampado resta $3 y pecho + espalda suma $2. Full Print desde 12 pzs ($13), 36+ ($12) y 72+ ($11).
+        </p>
+      </div>
+      <div class="bg-boneCard border border-boneBorder rounded-2xl p-6">
+        <h3 class="font-extrabold text-base mb-2">¿Hacen envíos?</h3>
+        <p class="text-sm text-inkMuted leading-relaxed">
+          Sí, hacemos entregas locales y envíos nacionales a toda Venezuela por agencia.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-boneBorder py-8 mt-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-inkMuted">
+      <p class="font-bold text-ink">SUBLIME</p>
+      <p>WhatsApp: +58 424-6506073</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/584246506073?text=Hola%20SUBLIME%2C%20quisiera%20hacer%20una%20consulta."
+     target="_blank" rel="noopener" aria-label="WhatsApp SUBLIME"
+     class="fixed bottom-5 right-5 z-50 bg-ink text-bone font-bold text-xs px-4 py-3 rounded-full shadow-lg hover:bg-neutral-800 transition flex items-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+    <span>WhatsApp</span>
+  </a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const PHONE = "584246506073";
+
+      function buildWaUrl(lines) {
+        return `https://wa.me/${PHONE}?text=${encodeURIComponent(lines.join("\n"))}`;
+      }
+
+      function parseQty(inputEl, minVal = 1) {
+        const val = parseInt(inputEl.value, 10);
+        if (Number.isNaN(val) || val < minVal) return minVal;
+        return val;
+      }
+
+      // --- 1. REGULAR FIT ---
+      const regularSizeEl = document.getElementById("size-regular");
+      const regularPrintEl = document.getElementById("print-regular");
+      const regularQtyEl = document.getElementById("qty-regular");
+
+      const stateRegular = {
+        color: "Blanco",
+        adultImg: "adulto regular 2.jpg",
+        kidImg: "niño 2.jpg"
+      };
+
+      function isRegularKid() {
+        return regularSizeEl.value.startsWith("Niño");
+      }
+
+      function syncRegularImage() {
+        const imgEl = document.getElementById("img-regular");
+        imgEl.style.display = "block";
+        if (imgEl.nextElementSibling) imgEl.nextElementSibling.style.display = "none";
+        imgEl.src = isRegularKid() ? stateRegular.kidImg : stateRegular.adultImg;
+      }
+
+      function renderRegular() {
+        const qty = parseQty(regularQtyEl, 1);
+        const kid = isRegularKid();
+        const base = kid ? 10 : 12;
+        const volDiscount = qty >= 12 ? 2 : (qty >= 3 ? 1 : 0);
+        const [deltaStr, printLabel] = regularPrintEl.value.split("|");
+        const printDelta = parseInt(deltaStr, 10) || 0;
+
+        const unit = base - volDiscount + printDelta;
+        const total = unit * qty;
+
+        document.getElementById("price-regular").textContent = `$${unit}`;
+        document.getElementById("tier-regular").textContent = `c/u · Total: $${total}`;
+        document.getElementById("wa-regular").href = buildWaUrl([
+          "Hola SUBLIME, quiero pedir:",
+          "• Producto: Franela Regular Fit",
+          `• Talla: ${regularSizeEl.value}`,
+          `• Color: ${stateRegular.color}`,
+          `• Acabado: ${printLabel}`,
+          `• Cantidad: ${qty}`,
+          `• Precio unitario: $${unit} (Total: $${total})`
+        ]);
+      }
+
+      regularSizeEl.addEventListener("change", () => {
+        syncRegularImage();
+        renderRegular();
+      });
+      regularPrintEl.addEventListener("change", renderRegular);
+      regularQtyEl.addEventListener("input", renderRegular);
+      regularQtyEl.addEventListener("change", () => {
+        regularQtyEl.value = parseQty(regularQtyEl, 1);
+        renderRegular();
+      });
+
+      document.querySelectorAll(".color-btn-regular").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          stateRegular.color = btn.dataset.color;
+          stateRegular.adultImg = btn.dataset.adultImg;
+          stateRegular.kidImg = btn.dataset.kidImg;
+          syncRegularImage();
+          document.querySelectorAll(".color-btn-regular").forEach((b) => {
+            b.className = "color-btn-regular px-3.5 py-2 rounded-xl text-xs font-bold border border-boneBorder bg-bone text-ink hover:border-ink transition";
+          });
+          btn.className = "color-btn-regular px-3.5 py-2 rounded-xl text-xs font-bold border border-ink bg-ink text-bone transition";
+          renderRegular();
+        });
+      });
+      renderRegular();
+
+      // --- 2. OVERSIZE ---
+      const oversizeSizeEl = document.getElementById("size-oversize");
+      const oversizePrintEl = document.getElementById("print-oversize");
+      const oversizeQtyEl = document.getElementById("qty-oversize");
+      let oversizeColor = "Negro (Siempre disponible)";
+
+      function renderOversize() {
+        const qty = parseQty(oversizeQtyEl, 1);
+        const volDiscount = qty >= 12 ? 2 : (qty >= 3 ? 1 : 0);
+        const [deltaStr, printLabel] = oversizePrintEl.value.split("|");
+        const printDelta = parseInt(deltaStr, 10) || 0;
+
+        const unit = 17 - volDiscount + printDelta;
+        const total = unit * qty;
+
+        document.getElementById("price-oversize").textContent = `$${unit}`;
+        document.getElementById("tier-oversize").textContent = `c/u · Total: $${total}`;
+        document.getElementById("wa-oversize").href = buildWaUrl([
+          "Hola SUBLIME, quiero pedir:",
+          "• Producto: Franela Oversize",
+          `• Talla: ${oversizeSizeEl.value}`,
+          `• Color: ${oversizeColor}`,
+          `• Acabado: ${printLabel}`,
+          `• Cantidad: ${qty}`,
+          `• Precio unitario: $${unit} (Total: $${total})`
+        ]);
+      }
+
+      oversizeSizeEl.addEventListener("change", renderOversize);
+      oversizePrintEl.addEventListener("change", renderOversize);
+      oversizeQtyEl.addEventListener("input", renderOversize);
+      oversizeQtyEl.addEventListener("change", () => {
+        oversizeQtyEl.value = parseQty(oversizeQtyEl, 1);
+        renderOversize();
+      });
+
+      document.querySelectorAll(".color-btn-oversize").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          oversizeColor = btn.dataset.color;
+          const imgEl = document.getElementById("img-oversize");
+          imgEl.style.display = "block";
+          if (imgEl.nextElementSibling) imgEl.nextElementSibling.style.display = "none";
+          imgEl.src = btn.dataset.img;
+          document.querySelectorAll(".color-btn-oversize").forEach((b) => {
+            b.className = "color-btn-oversize px-3.5 py-2 rounded-xl text-xs font-bold border border-boneBorder bg-bone text-ink hover:border-ink transition";
+          });
+          btn.className = "color-btn-oversize px-3.5 py-2 rounded-xl text-xs font-bold border border-ink bg-ink text-bone transition";
+          renderOversize();
+        });
+      });
+      renderOversize();
+
+      // --- 3. HOODIES ---
+      const hoodieSizeEl = document.getElementById("size-hoodie");
+      const hoodieQtyEl = document.getElementById("qty-hoodie");
+      let hoodieColor = "Negro";
+
+      function renderHoodie() {
+        const qty = parseQty(hoodieQtyEl, 1);
+        const volDiscount = qty >= 12 ? 2 : (qty >= 3 ? 1 : 0);
+        const unit = 25 - volDiscount;
+        const total = unit * qty;
+
+        document.getElementById("price-hoodie").textContent = `$${unit}`;
+        document.getElementById("tier-hoodie").textContent = `c/u · Total: $${total}`;
+        document.getElementById("wa-hoodie").href = buildWaUrl([
+          "Hola SUBLIME, quiero pedir:",
+          "• Producto: Hoodie",
+          `• Talla: ${hoodieSizeEl.value}`,
+          `• Color: ${hoodieColor}`,
+          `• Cantidad: ${qty}`,
+          `• Precio unitario: $${unit} (Total: $${total})`
+        ]);
+      }
+
+      hoodieSizeEl.addEventListener("change", renderHoodie);
+      hoodieQtyEl.addEventListener("input", renderHoodie);
+      hoodieQtyEl.addEventListener("change", () => {
+        hoodieQtyEl.value = parseQty(hoodieQtyEl, 1);
+        renderHoodie();
+      });
+
+      document.querySelectorAll(".color-btn-hoodie").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          hoodieColor = btn.dataset.color;
+          document.querySelectorAll(".color-btn-hoodie").forEach((b) => {
+            b.className = "color-btn-hoodie px-3.5 py-2 rounded-xl text-xs font-bold border border-boneBorder bg-bone text-ink hover:border-ink transition";
+          });
+          btn.className = "color-btn-hoodie px-3.5 py-2 rounded-xl text-xs font-bold border border-ink bg-ink text-bone transition";
+          renderHoodie();
+        });
+      });
+      renderHoodie();
+
+      // --- 4. FULL PRINT ---
+      const fullPrintQtyEl = document.getElementById("qty-fullprint");
+      let fullPrintStyle = "Fútbol";
+
+      function renderFullPrint() {
+        const qty = parseQty(fullPrintQtyEl, 12);
+        const unit = qty >= 72 ? 11 : (qty >= 36 ? 12 : 13);
+        const total = unit * qty;
+
+        document.getElementById("price-fullprint").textContent = `$${unit}`;
+        document.getElementById("tier-fullprint").textContent = `c/u · Total: $${total}`;
+        document.getElementById("wa-fullprint").href = buildWaUrl([
+          "Hola SUBLIME, quiero cotizar Uniformes Full Print:",
+          `• Estilo: ${fullPrintStyle}`,
+          `• Cantidad: ${qty} piezas`,
+          `• Precio unitario: $${unit} (Total: $${total})`
+        ]);
+      }
+
+      document.querySelectorAll(".style-btn-fp").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          fullPrintStyle = btn.dataset.style;
+          const imgEl = document.getElementById("img-fullprint");
+          imgEl.style.display = "block";
+          if (imgEl.nextElementSibling) imgEl.nextElementSibling.style.display = "none";
+          imgEl.src = btn.dataset.img;
+          document.querySelectorAll(".style-btn-fp").forEach((b) => {
+            b.className = "style-btn-fp px-3.5 py-2 rounded-xl text-xs font-bold border border-boneBorder bg-bone text-ink hover:border-ink transition";
+          });
+          btn.className = "style-btn-fp px-3.5 py-2 rounded-xl text-xs font-bold border border-ink bg-ink text-bone transition";
+          renderFullPrint();
+        });
+      });
+
+      fullPrintQtyEl.addEventListener("input", renderFullPrint);
+      fullPrintQtyEl.addEventListener("change", () => {
+        fullPrintQtyEl.value = parseQty(fullPrintQtyEl, 12);
+        renderFullPrint();
+      });
+      renderFullPrint();
+
+      // --- 5. CALCULADORA ---
+      const calcProductEl = document.getElementById("calc-product");
+      const calcQtyEl = document.getElementById("calc-qty");
+      const calcPrintEl = document.getElementById("calc-print");
+      const calcNoteEl = document.getElementById("calc-min-note");
+      const calcPrintNoteEl = document.getElementById("calc-print-note");
+
+      function syncCalculatorOptions(prod) {
+        const isFullPrint = prod === "fullprint";
+        const isTee = prod === "regular-adulto" || prod === "regular-nino" || prod === "oversize";
+
+        [...calcPrintEl.options].forEach((opt) => {
+          if (opt.value === "fullprint") opt.disabled = !isFullPrint;
+          else if (opt.value === "blank" || opt.value === "double") opt.disabled = !isTee;
+          else opt.disabled = isFullPrint;
+        });
+
+        if (isFullPrint) {
+          calcPrintEl.value = "fullprint";
+          calcPrintNoteEl.textContent = "Sublimación total incluida";
+        } else if (!isTee) {
+          calcPrintEl.value = "standard";
+          calcPrintNoteEl.textContent = "Precio base de hoodie";
+        } else {
+          if (calcPrintEl.value === "fullprint") calcPrintEl.value = "standard";
+          calcPrintNoteEl.textContent = "Sin estampado (-$3) · Pecho + espalda (+$2)";
+        }
+      }
+
+      function updateCalculator(enforceMin = false, productChanged = false) {
+        const prod = calcProductEl.value;
+        if (productChanged) syncCalculatorOptions(prod);
+
+        const isFullPrint = prod === "fullprint";
+        const isTee = prod === "regular-adulto" || prod === "regular-nino" || prod === "oversize";
+
+        calcNoteEl.textContent = isFullPrint
+          ? "Mínimo 12 pzs ($13) · 36+ ($12) · 72+ ($11)"
+          : "-1$ desde 3 pzs · -2$ desde 12 pzs";
+
+        let qty = parseQty(calcQtyEl, 1);
+        if (isFullPrint && qty < 12) {
+          qty = 12;
+          if (enforceMin) calcQtyEl.value = 12;
+        } else if (enforceMin) {
+          calcQtyEl.value = qty;
+        }
+
+        const mode = calcPrintEl.value;
+        let printDelta = 0;
+        let workLabel = "1 estampado incluido";
+
+        if (isFullPrint) {
+          workLabel = "Sublimación Full Print";
+        } else if (isTee && mode === "blank") {
+          printDelta = -3;
+          workLabel = "Sin estampado (-$3)";
+        } else if (isTee && mode === "double") {
+          printDelta = 2;
+          workLabel = "Pecho y espalda (+$2)";
+        }
+
+        let unit = 12;
+        let label = "Franela Regular Fit Adulto";
+        let badge = "Precio base";
+
+        if (prod === "regular-adulto") {
+          label = "Franela Regular Fit Adulto";
+          const vol = qty >= 12 ? 2 : (qty >= 3 ? 1 : 0);
+          unit = 12 - vol + printDelta;
+          badge = qty >= 12 ? "12+ pzs (-$2)" : (qty >= 3 ? "3+ pzs (-$1)" : "Precio base");
+        } else if (prod === "regular-nino") {
+          label = "Franela Regular Fit Niño";
+          const vol = qty >= 12 ? 2 : (qty >= 3 ? 1 : 0);
+          unit = 10 - vol + printDelta;
+          badge = qty >= 12 ? "12+ pzs (-$2)" : (qty >= 3 ? "3+ pzs (-$1)" : "Precio base");
+        } else if (prod === "oversize") {
+          label = "Franela Oversize";
+          const vol = qty >= 12 ? 2 : (qty >= 3 ? 1 : 0);
+          unit = 17 - vol + printDelta;
+          badge = qty >= 12 ? "12+ pzs (-$2)" : (qty >= 3 ? "3+ pzs (-$1)" : "Precio base");
+        } else if (prod === "hoodie") {
+          label = "Hoodie";
+          const vol = qty >= 12 ? 2 : (qty >= 3 ? 1 : 0);
+          unit = 25 - vol;
+          badge = qty >= 12 ? "12+ pzs (-$2)" : (qty >= 3 ? "3+ pzs (-$1)" : "Precio base");
+        } else if (prod === "fullprint") {
+          label = "Uniformes Full Print";
+          unit = qty >= 72 ? 11 : (qty >= 36 ? 12 : 13);
+          badge = qty >= 72 ? "72+ pzs" : (qty >= 36 ? "36+ pzs" : "Mín. 12 pzs");
+        }
+
+        const total = unit * qty;
+        document.getElementById("calc-name").textContent = label;
+        document.getElementById("calc-work-label").textContent = workLabel;
+        document.getElementById("calc-unit").textContent = `$${unit}`;
+        document.getElementById("calc-count").textContent = `${qty} piezas`;
+        document.getElementById("calc-total").textContent = `$${total}`;
+        document.getElementById("calc-badge").textContent = badge;
+
+        document.getElementById("calc-wa").href = buildWaUrl([
+          "Hola SUBLIME, hice esta cotización en la web:",
+          `• Prenda: ${label}`,
+          `• Acabado: ${workLabel}`,
+          `• Cantidad: ${qty} piezas`,
+          `• Precio unitario: $${unit}`,
+          `• Total estimado: $${total}`
+        ]);
+      }
+
+      calcProductEl.addEventListener("change", () => updateCalculator(true, true));
+      calcQtyEl.addEventListener("input", () => updateCalculator(false, false));
+      calcQtyEl.addEventListener("change", () => updateCalculator(true, false));
+      calcPrintEl.addEventListener("change", () => updateCalculator(false, false));
+      updateCalculator(true, true);
+    });
+  </script>
+</body>
+</html>
